@@ -2,6 +2,7 @@
   "private": true,
   "scripts": {
     "dev": "next",
+    "prebuild": "npx edgeql-js",
     "build": "next build",
     "start": "next start",
     "seed": "ts-node dbschema/seed.ts"
