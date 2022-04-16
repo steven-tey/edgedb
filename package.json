@@ -3,7 +3,7 @@
   "scripts": {
     "predev": "npx edgeql-js",
     "dev": "next",
-    "prebuild": "npx edgeql-js",
+    "postinstall": "npx edgeql-js",
     "build": "next build",
     "start": "next start",
     "seed": "ts-node dbschema/seed.ts"
