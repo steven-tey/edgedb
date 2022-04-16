@@ -1,0 +1,4 @@
+dbschema/edgeql-js
+/node_modules
+.next
+.env
