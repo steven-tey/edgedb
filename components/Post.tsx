@@ -1,9 +1,15 @@
-import React from 'react'
-import ReactMarkdown from 'react-markdown'
-import Link from 'next/link'
-import { PostProps } from '../pages/blog/[id]'
+import React from "react";
+import ReactMarkdown from "react-markdown";
+import Link from "next/link";
 
-const Post: React.FC<{ post: PostProps }> = ({ post }) => {
+const Post: React.FC<{
+  post: {
+    id: string;
+    title: string;
+    content: string;
+    authorName: string;
+  };
+}> = ({ post }) => {
   return (
     <Link href={`/blog/${post.id}`}>
       <div>
@@ -12,8 +18,8 @@ const Post: React.FC<{ post: PostProps }> = ({ post }) => {
         <br />
         <br />
         <ReactMarkdown
-          children={post.content || ''}
-          className={'react-markdown'}
+          children={post.content || ""}
+          className={"react-markdown"}
         />
         <style jsx>{`
           div {
@@ -35,7 +41,7 @@ const Post: React.FC<{ post: PostProps }> = ({ post }) => {
         `}</style>
       </div>
     </Link>
-  )
-}
+  );
+};
 
-export default Post
+export default Post;
