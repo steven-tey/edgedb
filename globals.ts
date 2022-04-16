@@ -1,3 +1,4 @@
-export const ROOT_URL = process.env.VERCEL_URL
-  ? `https://${process.env.VERCEL_URL}`
-  : 'http://localhost:3000'
+export const ROOT_URL =
+  process.env.VERCEL === "1"
+    ? `https://${process.env.VERCEL_URL}`
+    : "http://localhost:3000";
